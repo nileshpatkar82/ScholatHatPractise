@@ -41,11 +41,11 @@ namespace Lab_CustomMiddleware.Middleware
             await next(context);
         }
 
-        public Task Invoke(HttpContext httpContext)
-        {
+        //public Task Invoke(HttpContext httpContext)
+        //{
 
-            return next(httpContext);
-        }
+        //    return next(httpContext);
+        //}
     }
 
     // Extension method used to add the middleware to the HTTP request pipeline.
