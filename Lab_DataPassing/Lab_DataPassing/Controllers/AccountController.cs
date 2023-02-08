@@ -1,6 +1,6 @@
 ﻿using Lab_DataPassing.Models;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Lab_DataPassing.Controllers
 {
@@ -33,6 +33,12 @@ namespace Lab_DataPassing.Controllers
                     ViewBag.ErrorMessage = "Username or Password doesn't exists!";
                 }
             }
+            return View();
+        }
+
+        public IActionResult LogOut()
+        {
+            HttpContext.Session.Clear();
             return View();
         }
     }
